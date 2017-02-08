@@ -1,0 +1,92 @@
+@include namespace($app, $t) {
+  @include class('form') {
+    background-color: gray(5%);
+    min-height: 100%;
+    padding: 3rem 1.5rem 1.5rem;
+    @include content {
+      background-image: url-svg($i-ssl-1);
+      background-position: right 1.5rem top 1.5rem;
+      background-size: auto 2.4rem;
+      background-repeat: no-repeat;
+      background-color: white;
+      border: 1px solid gray(10%);
+      border-radius: 3px;
+      max-width: $md;
+      padding: 1.5rem;
+      @include margin((h: auto));
+    }
+    @include class('title') {
+      color: $c-1;
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-bottom: 3rem;
+    }
+    @include class('description') {
+      padding: 1.5rem;
+    }
+    @include class('fields') {
+      margin-bottom: 3rem;
+    }
+    @include class('field') {
+      margin-bottom: 1.5rem;
+      @include class('error') {
+        color: $c-3;
+      }
+      @include class('input') {
+        border: 1px solid gray(10%);
+        border-radius: 3px;
+        color: $c-1;
+        display: block;
+        padding: .9rem 1.5rem;
+        transition: border-color .3s ease-in-out;
+        width: 100%;
+        @include focus-hover {
+          border-color: $c-1;
+        }
+        @include state('valid', 'ng-') {
+          background-image: url-svg($i-check-2);
+          background-position: right 1.5rem center;
+          background-size: auto 2.1rem;
+          background-repeat: no-repeat;
+        }
+        &::placeholder {
+          color: gray(25%);
+        }
+        &:disabled {
+          background-color: gray(10%);
+          background-image: none;
+        }
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    @include class('resend') {
+      cursor: pointer;
+    }
+    @include class('buttons') {
+      display: flex;
+      justify-content: space-between;
+    }
+    @include class('button') {
+      cursor: pointer;
+      padding: .9rem 1.5rem;
+      text-transform: uppercase;
+      flex: 0 0 auto;
+      @include state('submit') {
+        background-color: map-get($c-2, default);
+        border-radius: 30px;
+        color: white;
+        @include padding((h: 2.4rem));
+        @include focus-hover {
+          background-color: map-get($c-2, darkest);
+        }
+      }
+    }
+    @include class('notification') {
+      @include state('error') {
+        color: $c-3;
+      }
+    }
+  }
+}

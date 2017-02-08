@@ -1,0 +1,32 @@
+<header class="header" ng-include="partials.header"></header>
+<main class="form verification">
+  <form class="form_content" name="form" ng-submit="submitForm(form)" valdr-type="user" novalidate>
+    <h2 class="form_title">
+      {{ 'VERIFICATION.TITLE' | translate }}
+    </h2>
+    <p class="form_description">
+      {{ 'VERIFICATION.DESCRIPTION' | translate }}
+    </p>
+    <fieldset class="form_fields">
+      <p class="form_field">
+        <input class="form_field_input" type="text" placeholder="{{ user.email }}" disabled="disabled" name="email" ng-model="user.email">
+      </p>
+      <p class="form_field">
+        <input class="form_field_input" type="text" placeholder="{{ 'VERIFICATION.CODE' | translate }}" name="code" ng-model="user.code">
+      </p>
+      <p class="form_notification __error" ng-if="errorVisible" valdr-message="code"></p>
+      <p class="form_notification __error">{{ status }}</p>
+      <button class="form_resend" ng-click="resendCode()">
+        {{ 'VERIFICATION.RESEND' | translate }}
+      </button>
+    </fieldset>
+    <nav class="form_buttons">
+      <a class="form_button" ui-sref="signIn" type="button">
+        {{ 'VERIFICATION.CANCEL' | translate }}
+      </a>
+      <button class="form_button __submit" ng-click="showError()">
+        {{ 'VERIFICATION.SUBMIT' | translate }}
+      </button>
+    </nav>
+  </form>
+</main>

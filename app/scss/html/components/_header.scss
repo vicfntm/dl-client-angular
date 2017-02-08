@@ -1,0 +1,36 @@
+  @include namespace($app, $t) {
+  @include header {
+    background-color: $c-1;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    text-transform: uppercase;
+
+    @include class('title') {
+      flex: 0 1 auto;
+
+      @include state('suffix') {
+        font-weight: 700;
+      }
+    }
+
+    @include class('menu') {
+      display: flex;
+      flex: 1 1 auto;
+      justify-content: flex-end;
+      list-style-type: none;
+
+      @include class('item') {
+        flex: 0 0 auto;
+        margin-left: 1.5rem;
+
+        @include content {
+          @include state('active', '') {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}

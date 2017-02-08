@@ -1,0 +1,36 @@
+{
+  "authors": "",
+  "dependencies": {
+    "compression": "^1.6.2",
+    "connect-modrewrite": "^0.9.0",
+    "express": "^4.14.0",
+    "grunt": "^1.0.1",
+    "grunt-angular-templates": "1.x",
+    "grunt-autoprefixer": "3.x",
+    "grunt-bower-concat": "0.x",
+    "grunt-concurrent": "2.x",
+    "grunt-contrib-clean": "0.x",
+    "grunt-contrib-concat": "0.x",
+    "grunt-contrib-connect": "0.x",
+    "grunt-contrib-copy": "0.x",
+    "grunt-contrib-cssmin": "0.x",
+    "grunt-contrib-htmlmin": "^2.0.0",
+    "grunt-contrib-uglify": "0.x",
+    "grunt-contrib-watch": "0.x",
+    "grunt-filerev": "1.x",
+    "grunt-include-source": "0.x",
+    "grunt-mkdir": "0.x",
+    "grunt-ng-annotate": "1.x",
+    "grunt-oldmen-build": "0.x",
+    "grunt-sass": "1.x",
+    "load-grunt-tasks": "3.x",
+    "serve-static": "1.x",
+    "time-grunt": "1.x"
+  },
+  "engines": {
+    "node": "5.x"
+  },
+  "licence": "",
+  "name": "trainee",
+  "version": "0.1.0"
+}

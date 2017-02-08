@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "angular": "^1.5.x",
+    "restangular": "^1.5.2",
+    "angular-translate": "^2.13.0",
+    "angular-local-storage": "^0.5.2",
+    "valdr": "^1.1.6",
+    "angular-ui-router": "1.x",
+    "lodash": "^4.17.2"
+  },
+  "name": "trainee",
+  "version": "0.1.0"
+}

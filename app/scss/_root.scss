@@ -1,0 +1,64 @@
+@import 'root/animations';
+@import 'root/fonts';
+// @import 'root/angular';
+// @import 'root/mobile';
+
+// 1. remove outline property globally
+//
+:focus,
+:hover {
+  outline: none; // 1
+}
+
+// 1. remove webkit scrollbar globally
+//
+::-webkit-scrollbar {
+  display: none; // 1
+}
+
+// 1. set root font size to 10px to simplify rem usage
+// 2. https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth
+//
+:root {
+  font-size: 10px !important; // 1
+  -webkit-font-smoothing: antialiased; // 2
+}
+
+// 1. set default font family
+// 2. set default font size
+// 3. set default line height
+//
+body {
+  @include font-sans-serif; // 1
+  @include font-size(1.5rem, 2.4rem); // 2 & 3
+}
+
+// 1. reset link color
+// 2. reset link outline
+//
+a {
+  color: inherit; //1
+  outline: none; //2
+}
+
+// 1. force html & body to fit window height
+//
+body, html {
+  height: 100%; // 1
+}
+
+// 1. reset button min-height
+//
+button, [type='button'] {
+  min-height: 0; // 1
+}
+
+// 1. reset h1-h6 font-weight
+// 2. reset h1-h6 margin
+// 3. reset h1-h6 padding
+//
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; // 1
+  margin: 0; // 2
+  padding: 0; // 3
+}

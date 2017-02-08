@@ -1,0 +1,29 @@
+<header class="header" ng-include="partials.header"></header>
+<main class="form">
+  <form class="form_content" name="form" ng-submit="submitForm(form)" valdr-type="user" novalidate>
+    <h2 class="form_title">
+      {{ 'SIGN_IN.TITLE' | translate }}
+    </h2>
+    <p class="form_notification __error __warning" ng-if="errorVisible">
+      {{ status }}
+    </p>
+    <fieldset class="form_fields">
+      <p class="form_field">
+        <input class="form_field_input" type="text" name="name" ng-model="user.firstName" placeholder="{{ 'SIGN_IN.NAME' | translate }}">
+        <span class="form_field_error" valdr-message="name" ng-if="errorVisible"></span>
+      </p>
+      <p class="form_field">
+        <input class="form_field_input" type="email" name="email" ng-model="user.email" placeholder="{{ 'SIGN_IN.EMAIL' | translate }}" ng-click="hideError()">
+        <span class="form_field_error" valdr-message="email" ng-if="errorVisible"></span>
+      </p>
+    </fieldset>
+    <nav class="form_buttons">
+      <a class="form_button" ui-sref="signUp">
+        {{'SIGN_IN.TO_SIGN_UP' | translate }}
+      </a>
+      <button class="form_button __submit" ng-click="showError()">
+        {{ 'SIGN_IN.SUBMIT' | translate }}
+      </button>
+    </nav>
+  </form>
+</main>

@@ -1,0 +1,20 @@
+<h1 class="header_title">
+  <a ui-sref="home">
+    {{ 'HEADER.TITLE_PREFIX' | translate }}
+    <span class="header_title_suffix">
+      {{ 'HEADER.TITLE_SUFFIX' | translate }}
+    </span>
+  </a>
+</h1>
+<ul class="header_menu">
+  <li class="header_menu_item">
+    <a class="header_menu_item_content" ui-sref="signIn" ui-sref-active="active">
+      {{ 'HEADER.SIGN_IN' | translate }}
+    </a>
+  </li>
+  <li class="header_menu_item">
+    <a class="header_menu_item_content" ui-sref="signUp" ui-sref-active="active">
+      {{ 'HEADER.SIGN_UP' | translate }}
+    </a>
+  </li>
+</ul>
